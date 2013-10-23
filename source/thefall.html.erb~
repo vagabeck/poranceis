@@ -1,0 +1,15 @@
+---
+title: The Fall
+image: thefall.jpg
+width: 1900
+height: 1080
+markers:
+  dude: 850, 315
+  dudette: 800, 620
+---
+<div class="mapa-magico">
+  <%= image_tag current_page.data.image, :class=>"imgMap" %>
+  <% current_page.data.markers.each do |id, coords| %>
+    <div class='marker' id="<%= id %>" data-coords="<%= coords %>"></div>
+  <% end %>
+</div>

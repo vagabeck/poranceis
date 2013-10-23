@@ -1,0 +1,14 @@
+---
+title: poranceis
+image: guardiao_projeto_red.jpg
+width: 2068
+height: 1456
+markers:
+  interior: 1030, 1070
+---
+<div class="mapa-magico">
+  <%= image_tag current_page.data.image, :class=>"imgMap" %>
+  <% current_page.data.markers.each do |id, coords| %>
+    <div class='marker' id="<%= id %>" data-coords="<%= coords %>"></div>
+  <% end %>
+</div>
