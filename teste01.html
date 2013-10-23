@@ -57,7 +57,8 @@ body {background-image:url('http://4.bp.blogspot.com/-5EVVFy7v5Xo/UmcJkTPAkzI/AA
           },
           marker: {
             onClick: function(marker) {
-              document.location.href = marker[0].id + '.html';
+              page = marker[0].id.replace(/[0-9]/g, '');
+              document.location.href = page + '.html';
             }
           }
       });

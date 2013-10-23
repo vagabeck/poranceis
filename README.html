@@ -105,7 +105,8 @@ of developers have helped make the HTML5 Boilerplate what it is today.</p>
           },
           marker: {
             onClick: function(marker) {
-              document.location.href = marker[0].id + '.html';
+              page = marker[0].id.replace(/[0-9]/g, '');
+              document.location.href = page + '.html';
             }
           }
       });
