@@ -101,6 +101,16 @@ textarea {
   cursor: pointer;
 }
 
+.video-com-texto {
+  width: 640px;
+  margin: 0 auto;
+}
+
+h1, h2 {text-align:center; color:#FFFFFF;font-family:Helvetica,sans-serif;}
+
+h1 {font-size:2em;}
+h2 {font-size:1em;}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
