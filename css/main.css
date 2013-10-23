@@ -102,13 +102,13 @@ textarea {
 }
 
 .video-com-texto {
-  width: 620px;
+  width: 720px;
   margin: 0 auto;
 }
 
 h1, h2 {text-align:center; color:#FFFFFF;font-family:Helvetica,sans-serif;}
 
-h1 {font-size:2em;}
+h1 {font-size:0.5em;}
 h2 {font-size:1em;}
 
 p {margin: 1em auto}
