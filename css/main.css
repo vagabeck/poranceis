@@ -104,6 +104,10 @@ textarea {
   /*background-color: red;*/
 }
 
+.multiback {
+  background: background1, background2, ..., backgroundN;
+}
+
 .video-com-texto {
   width: 720px;
   margin: 0 auto;
