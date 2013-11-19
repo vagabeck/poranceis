@@ -1,0 +1,21 @@
+---
+title: rumos
+image: fundorumos.jpg
+width: 1600
+height: 1068
+markers:
+  etapaum1: 450, 452
+  etapadois2: 614, 296
+  etapatres3: 884, 254
+  todos4: 1194, 416
+  materialextra5: 1116, 518
+  divulgacao6: 988, 692
+  links7: 1012, 746
+  index8: 926, 764
+---
+<div class="mapa-magico">
+  <%= image_tag current_page.data.image, :class=>"imgMap" %>
+  <% current_page.data.markers.each do |id, coords| %>
+    <div class='marker' id="<%= id %>" data-coords="<%= coords %>"></div>
+  <% end %>
+</div>

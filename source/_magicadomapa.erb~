@@ -1,0 +1,16 @@
+<script>
+  $(document).ready(function(){
+      $('.mapa-magico').craftmap({
+          fullscreen: true,
+          image: {
+            width: <%= current_page.data.width %>,
+            height: <%= current_page.data.height %>,
+          },
+          marker: {
+            onClick: function(marker) {
+              document.location.href = marker[0].id + '.html';
+            }
+          }
+      });
+  });
+</script>

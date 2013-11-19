@@ -4,7 +4,11 @@ image: guardiao_projeto_red.jpg
 width: 2068
 height: 1456
 markers:
-  interior: 1030, 1070
+  interior1: 1036, 1074
+  interior3: 864, 1148
+  interior4: 864, 1116
+  interior5: 1220, 1180
+  interior6: 1220, 1210
 ---
 <div class="mapa-magico">
   <%= image_tag current_page.data.image, :class=>"imgMap" %>

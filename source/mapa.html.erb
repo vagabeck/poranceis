@@ -1,0 +1,24 @@
+---
+title: mapa
+image: mapaindex.jpg
+width: 1600
+height: 979
+markers:
+  rumos1: 634, 234
+  guardiao2: 1076, 190
+  interior3: 422, 174
+  camino4: 912, 294
+  cura5: 366, 288
+  duo6: 188, 436
+  entrega7: 1084, 672
+  pedra8: 1100, 290
+  sol9: 1390, 86 
+  uno10: 
+  tri11:
+---
+<div class="mapa-magico">
+  <%= image_tag current_page.data.image, :class=>"imgMap" %>
+  <% current_page.data.markers.each do |id, coords| %>
+    <div class='marker' id="<%= id %>" data-coords="<%= coords %>"></div>
+  <% end %>
+</div>

@@ -1,0 +1,14 @@
+---
+title: tri
+image: tri.jpg
+width: 1476
+height: 980
+markers:
+  mapa1: 0,0
+---
+<div class="mapa-magico">
+  <%= image_tag current_page.data.image, :class=>"imgMap" %>
+  <% current_page.data.markers.each do |id, coords| %>
+    <div class='marker' id="<%= id %>" data-coords="<%= coords %>"></div>
+  <% end %>
+</div>

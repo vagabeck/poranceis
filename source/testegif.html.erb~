@@ -1,0 +1,13 @@
+---
+title: gif
+---
+<style>
+
+body {  background-color: #33FF99;
+	background-image:url('../img/anigif3.gif');
+	background-repeat: no-repeat;
+        background-position: center;
+	height: 1662px;}
+</style>
+
+</div>

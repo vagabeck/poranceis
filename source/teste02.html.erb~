@@ -1,0 +1,13 @@
+---
+title: guardião
+---
+<style>
+
+body {  background-color: #33ff99;
+	background-image:url('../img/Digitalizar0001.jpg'), url('../img/fundo_negativo.jpg);
+	background-repeat: no-repeat, repeat;
+        background-position: center, top right;
+	height: 1662px, auto;}
+</style>
+
+</div>
