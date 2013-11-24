@@ -1,4 +1,4 @@
-/* 
+/*
  * CraftMap
  * author: Marcin Dziewulski
  * web: http://www.jscraft.net
@@ -41,9 +41,9 @@
 				onLoad: function(img, dimensions){}
 			}
 		}; // default settings
-		
-		var S = $.extend(true, D, options); 
-		
+
+		var S = $.extend(true, D, options);
+
         return this.each(function(){
 			var M = $(this),
 				IMG = M.find('.'+S.image.name),
@@ -72,15 +72,15 @@
 								};
 							IMG.css(max);
 							var css = {
-								position: 'relative', 
-								overflow: 'hidden', 
+								position: 'relative',
+								overflow: 'hidden',
 								cursor: 'move'
 							}
 							M.css(css);
 						},
 						wrap: function(){
 							var css = {
-								zIndex: '1', 
+								zIndex: '1',
 								position: 'absolute',
 								width: S.image.width,
 								height: S.image.height
@@ -109,7 +109,7 @@
 					_mouse: {
 						get: function(e){
 							var x = e.pageX,
-								y = e.pageY; 
+								y = e.pageY;
 							return {'x': x, 'y': y}
 						},
 						update: function(e){
@@ -147,13 +147,13 @@
 											left: coords.x,
 											top: coords.y
 										};
-									C.css(css);	
+									C.css(css);
 									++timer;
 									if (timer == tc){
 										clearInterval(interval);
 										timer = 0;
 									}
-								}, 40);	
+								}, 40);
 							}
 						},
 						wheel: {
@@ -174,7 +174,7 @@
 								}
 								if (window.addEventListener){
 									window.addEventListener('DOMMouseScroll', M.handle, false);
-								}	
+								}
 								window.onmousewheel = document.onmousewheel = M.handle;
 							},
 							remove: function(){
@@ -252,11 +252,11 @@
 						},
 						create: function(){
 							var css = {
-								position: 'absolute', 
-								zIndex: '10', 
-								top: '0', 
-								left: '0', 
-								width: '100%', 
+								position: 'absolute',
+								zIndex: '10',
+								top: '0',
+								left: '0',
+								width: '100%',
 								height: '100%'
 							}
 							M.append($('<div />').addClass(S.preloader.name).css(css));
@@ -277,11 +277,11 @@
 							set: function(){
 								if (S.cookies){
 									if (typeof P.cookies.read('position') != 'null') {
-										var position = P.cookies.read('position').split(','), 
-											x = position[0], 
+										var position = P.cookies.read('position').split(','),
+											x = position[0],
 											y = position[1];
 									} else {
-										var x = (D.w-I.w)/2, 
+										var x = (D.w-I.w)/2,
 											y = (D.h-I.h)/2;
 									}
 								} else {
@@ -314,7 +314,7 @@
 												coords = P.map.position.check(x, y),
 												x = coords.x,
 												y = coords.y;
-									}	
+									}
 								}
 								var css = { top: y, left: x }
 								C.css(css);
@@ -325,7 +325,7 @@
 								} else if (y > 0){
 									y = 0;
 								}
-								
+
 								if (x < (D.w-I.w)){
 									x = D.w-I.w;
 								} else if (x>0){
@@ -360,7 +360,7 @@
 										mv.push(coords);
 										if (mv.length > 15){
 											mv.pop();
-										}	
+										}
 									}
 									return false;
 								},
@@ -411,7 +411,7 @@
 								var t = $(this), id = t.attr('id'), marker = S.marker, w = t.width(), h = t.height(),
 									position = t.position(), x = position.left, y = position.top, id = t.attr('id'),
 									html = t.find('.'+marker.name+'Content').html();
-									
+
 								if (marker.center){
 									var cy = -y+D.h/2-h/2,
 										cx = -x+D.w/2-w/2,
@@ -422,11 +422,11 @@
 										};
 									C.animate(animate);
 								}
-								
+
 								if (marker.popup){
 									$('.'+marker.popup_name).remove();
 									var css = {
-										position:'absolute', 
+										position:'absolute',
 										zIndex:'3'
 									}
 									t.after(
@@ -434,11 +434,11 @@
 											$('<a />').addClass('close')
 										)
 									);
-									var POPUP = t.next('.'+marker.popup_name), 
-										pw = POPUP.innerWidth(), 
+									var POPUP = t.next('.'+marker.popup_name),
+										pw = POPUP.innerWidth(),
 										ph = POPUP.innerHeight(),
 										x0 = 0, y0 = 0;
-									
+
 									if (x-pw < 0){
 										x0 = x;
 									} else if (x+pw/2 > I.w){
@@ -446,13 +446,13 @@
 									} else {
 										x0 = x-(pw/2-w/2);
 									}
-									
+
 									if (y-ph < 0){
 										y0 = y+h+h/1.5;
 									} else {
 										y0 = y-ph-h/1.5;
 									}
-									
+
 									if (x-pw < 0 && y-ph < 0){
 										x0 = x+w*2;
 										y0 = y-h/2;
@@ -466,7 +466,7 @@
 										x0 = x;
 										y0 = y-ph-h/2;
 									}
-									
+
 									var	css = {
 											left: x0,
 											top: y0
@@ -474,7 +474,7 @@
 									POPUP.css(css);
 								}
 								P.controls.active.set(id);
-								marker.onClick.call(this, t, POPUP); 
+								marker.onClick.call(this, t, POPUP);
 								return false;
 							});
 						},

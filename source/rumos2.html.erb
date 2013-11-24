@@ -1,5 +1,21 @@
 ---
-title: Rumos
+title: rumos
+image: fundorumos.jpg
+width: 1600
+height: 1068
+markers:
+  etapaum1: 450, 452
+  etapadois2: 614, 296
+  etapatres3: 884, 254
+  coletivo4: 1194, 416
+  materialextra5: 1116, 518
+  divulgacao6: 988, 692
+  links7: 1012, 746
+  index8: 926, 764
 ---
-
-<map id="imgmap20131119185323" name="imgmap20131119185323"><area shape="circle" alt="Etapa Um" title="" coords="446,454,26" href="http://poranceis.com.br/etapaum.html" target="_blank" /><area shape="circle" alt="Etapa Dois" title="" coords="620,299,24" href="http://poranceis.com.br/etapadois.html" target="_blank" /><area shape="circle" alt="Etapa Três" title="" coords="885,252,24" href="http://poranceis.com.br/etapatres.html" target="_blank" /><area shape="circle" alt="" title="" coords="1194,411,25" href="http://poranceis.com.br/coletivo.html" target="_blank" /><area shape="circle" alt="Material Extra" title="" coords="1121,515,24" href="http://poranceis.com.br/materialextra.html" target="_blank" /><area shape="circle" alt="Divulgação" title="" coords="988,677,24" href="http://poranceis.com.br/divulgacao.html" target="_blank" /><area shape="circle" alt="Links" title="" coords="1007,746,24" href="http://poranceis.com.br/links.html" target="_blank" /><area shape="circle" alt="Poranceis" title="" coords="929,769,21" href="http://poranceis.com.br/index.html" target="_blank" /><!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) --></map>
+<div class="mapa-magico">
+  <%= image_tag current_page.data.image, :class=>"imgMap" %>
+  <% current_page.data.markers.each do |id, coords| %>
+    <div class='marker' id="<%= id %>" data-coords="<%= coords %>"></div>
+  <% end %>
+</div>

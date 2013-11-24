@@ -1,17 +1,17 @@
 ---
 title: rumos
-image: fundorumos.jpg
-width: 1600
-height: 1068
+image: newfundorumos.jpg
+width: 2400
+height: 1602
 markers:
-  etapaum1: 450, 452
-  etapadois2: 614, 296
-  etapatres3: 884, 254
-  todos4: 1194, 416
-  materialextra5: 1116, 518
-  divulgacao6: 988, 692
-  links7: 1012, 746
-  index8: 926, 764
+  etapaum1: 670, 685
+  etapadois2: 936, 444
+  etapatres3: 1330, 380
+  coletivo4: 1790, 625
+  materialextra5: 1685, 774
+  divulgacao6: 1480, 1020
+  links7: 1515, 1123
+  index8: 1400, 1155
 ---
 <div class="mapa-magico">
   <%= image_tag current_page.data.image, :class=>"imgMap" %>
