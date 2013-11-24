@@ -23,23 +23,23 @@
         <![endif]-->
 
         <div class="mapa-magico">
-  <img class="imgMap" src="img/fundorumos.jpg" />
+  <img class="imgMap" src="img/newfundorumos.jpg" />
   
-    <div class='marker' id="etapaum1" data-coords="450, 452"></div>
+    <div class='marker' id="etapaum1" data-coords="670, 685"></div>
   
-    <div class='marker' id="etapadois2" data-coords="614, 296"></div>
+    <div class='marker' id="etapadois2" data-coords="936, 444"></div>
   
-    <div class='marker' id="etapatres3" data-coords="884, 254"></div>
+    <div class='marker' id="etapatres3" data-coords="1330, 380"></div>
   
-    <div class='marker' id="coletivo4" data-coords="1194, 416"></div>
+    <div class='marker' id="coletivo4" data-coords="1790, 625"></div>
   
-    <div class='marker' id="materialextra5" data-coords="1116, 518"></div>
+    <div class='marker' id="materialextra5" data-coords="1685, 774"></div>
   
-    <div class='marker' id="divulgacao6" data-coords="988, 692"></div>
+    <div class='marker' id="divulgacao6" data-coords="1480, 1020"></div>
   
-    <div class='marker' id="links7" data-coords="1012, 746"></div>
+    <div class='marker' id="links7" data-coords="1515, 1123"></div>
   
-    <div class='marker' id="index8" data-coords="926, 764"></div>
+    <div class='marker' id="index8" data-coords="1400, 1155"></div>
   
 </div>
 
@@ -55,8 +55,11 @@
       $('.mapa-magico').craftmap({
           fullscreen: true,
           image: {
-            width: 1600,
-            height: 1068,
+            width: 2400,
+            height: 1602,
+          },
+          map: {
+            position: 'center'
           },
           marker: {
             onClick: function(marker) {
